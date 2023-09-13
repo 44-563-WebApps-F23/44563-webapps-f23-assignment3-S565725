@@ -6,6 +6,35 @@
         <p>One of the reasons I love Bisibele bath is its versatility.<br>The dish can be made with various ingredients, including chicken, shrimp, and vegetables. I can add my favorite vegetables such as carrots, peas, and broccoli to create a healthy and nutritious meal.</p>
         <img src = "C:\Users\S565725\Documents\GitHub\44563-webapps-f23-assignment3-S565725\img1.jpg" alt = "Bisibele bath" width="400" height="300">
 
-    
+        <blockquote cite ="//stackoverflow.com/questions/61179458/svg-patterns-scaling-the-way-pattern-is-not-cut-off"</blockquote>
+        <a href="https://css-tricks.com/snippets/svg/svg-patterns/">SVG patterns</a>
+        <pre>    
+          &lt;svg width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+  
+          Create mask that we&#39;ll use to define a slight gradient 
+          &lt;mask maskUnits=&quot;userSpaceOnUse&quot; id=&quot;fade&quot;&gt;
+            &lt;!-- Here&#39;s that slight gradient --&gt;
+                 &lt;linearGradient id=&quot;gradient&quot; x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;0&quot; y2=&quot;100%&quot;&gt;
+              &lt;stop offset=&quot;0&quot; style=&quot;stop-color: #FFFFFF&quot;&gt;&lt;/stop&gt;
+              &lt;stop offset=&quot;1&quot; style=&quot;stop-color: #000000&quot;&gt;&lt;/stop&gt;
+            &lt;/linearGradient&gt;
+            &lt;!-- The canvas for our mask --&gt;
+            &lt;rect fill=&quot;url(#gradient)&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;&lt;/rect&gt;
+          &lt;/mask&gt;
+            
+          &lt;!-- Let&#39;s define the pattern --&gt;
+          &lt;!-- The width and height should be double the circle radius we plan to use --&gt;
+          &lt;pattern id=&quot;pattern-circles&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;40&quot; height=&quot;40&quot; patternUnits=&quot;userSpaceOnUse&quot;&gt;
+            &lt;!-- Now let&#39;s draw the circle --&gt;
+            &lt;!-- We&#39;re going to define the `fill` in the CSS for flexible use --&gt;
+            &lt;circle mask=&quot;url(#fade)&quot; cx=&quot;20&quot; cy=&quot;20&quot; r=&quot;20&quot;&gt;&lt;/circle&gt;
+          &lt;/pattern&gt;
+          &lt;!-- The canvas with our applied pattern --&gt;
+          &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;url(#pattern-circles)&quot;&gt;&lt;/rect&gt;
+          
+        &lt;/svg&gt;
+        </pre>
+
+          
     </body>
 </HTML>
